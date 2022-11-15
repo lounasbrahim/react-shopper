@@ -6,6 +6,8 @@ import axios from "axios";
 // @ts-nocheck
 import LoadingSpinner from "../components/LoadingSpinner";
 import formatProductPrice from "../utils/formatProductPrice";
+import AddToCart from "../components/AddToCart";
+import RemoveFromCart from "../components/RemoveFromCart";
 
 export default function Product() {
   const { productId } = useParams();
@@ -51,6 +53,8 @@ export default function Product() {
               <span className="title-font font-medium text-2xl text-white">
                 {price}
               </span>
+              <AddToCart />
+              <RemoveFromCart />
             </div>
           </div>
         </div>
