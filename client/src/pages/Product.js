@@ -53,8 +53,8 @@ export default function Product() {
               <span className="title-font font-medium text-2xl text-white">
                 {price}
               </span>
-              <AddToCart />
-              <RemoveFromCart />
+              <AddToCart product={product} />
+              <RemoveFromCart product={product} />
             </div>
           </div>
         </div>
