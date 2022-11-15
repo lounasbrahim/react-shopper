@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
+import { Toaster } from "react-hot-toast";
 
 import Home from "./pages/Home";
 import Product from "./pages/Product";
@@ -20,6 +21,7 @@ function App() {
         currency="USD"
       >
         <BrowserRouter>
+          <Toaster position="bottom-center" />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/result" component={Result} />
