@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 import ProductItem from "../components/ProductItem";
+import { useQuery } from "react-query";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function ProductList() {
-  const [products, setProducts] = useState([]);
+  const { data: products, isLoading } = useQuery("Products", () =>
+    axios.get("/api/products").then((res) => res.data.products)
+  );
 
-  useEffect(() => {
-    axios
-      .get("/api/products")
-      .then((res) => res.data.products)
-      .then((products) => setProducts(products));
-  });
+  if (isLoading) return <LoadingSpinner />;
 
   return products.map((product) => (
     <ProductItem key={product.id} product={product} />
