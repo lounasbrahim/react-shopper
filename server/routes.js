@@ -20,11 +20,10 @@ function getProduct(req, res) {
     const product = products.find((product) => product.id === productId);
 
     if (!product) {
-      throw Error(`there is no Product for this id : ${productId}`);
+      throw Error(`there is no Product for id : ${productId}`);
     }
     return res.status(200).json({ product });
   } catch (error) {
-    console.log(error);
-    return res.status(404).json({ statusCode: 404, messsage: error.messsage });
+    return res.status(404).json({ statusCode: 404, messsage: error.message });
   }
 }
