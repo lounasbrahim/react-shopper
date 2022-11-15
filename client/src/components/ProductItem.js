@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import formatProductPrice from "../utils/formatProductPrice";
 
 const ProductItem = ({ product }) => {
+  const price = formatProductPrice(product);
+
   return (
     <>
       {" "}
@@ -40,8 +43,7 @@ const ProductItem = ({ product }) => {
                 </span>
               </Link>
               <span className="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-lg pr-3 py-1 border-gray-800 font-bold">
-                {product.price}
-                {product.currency}
+                {price}
               </span>
             </div>
           </div>

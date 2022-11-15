@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
-import ProductItem from "../components/ProductItem";
 import { useQuery } from "react-query";
+
+import ProductItem from "../components/ProductItem";
 import LoadingSpinner from "./LoadingSpinner";
 
 export default function ProductList() {
