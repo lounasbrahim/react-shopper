@@ -37,13 +37,13 @@ by using nvm (nvm should be already installed) :
 
 ## Screenshot 
 
-![Home Page](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/1.png?raw=true)
+![Home Page](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/1.png)
 
-![Product Page](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/2.png?raw=true)
+![Product Page](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/2.png)
 
-![Cart Modal](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/3.png?raw=true)
+![Cart Modal](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/3.png)
 
-![Stripe Checkout](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/4.png?raw=true)
+![Stripe Checkout](https://github.com/lounasbrahim/react-shopper/blob/main/Screenshots/4.png)
 
 
 
