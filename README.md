@@ -1,4 +1,4 @@
-React / Nodejs Shopping Cart with stripe payements
+React /TailwindCss / Nodejs / Stripe Api Shopping Cart with stripe payements
 
 ## Requirements
 
