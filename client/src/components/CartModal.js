@@ -1,15 +1,19 @@
 // @ts-nocheck
-import React from "react";
-import Modal from "react-modal";
-import { useShoppingCart } from "use-shopping-cart";
-import CartItem from "./CartItem";
+import React from 'react'
+import Modal from 'react-modal'
+import { useShoppingCart } from 'use-shopping-cart'
 
-Modal.setAppElement("#root");
+import useCheckout from '../utils/useCheckout'
+import CartItem from './CartItem'
+
+Modal.setAppElement('#root')
 
 export default function CartModal({ isCartModalOpen: isOpen, toggleModal }) {
-  const { cartCount, formattedTotalPrice, cartDetails } = useShoppingCart();
+  const { cartCount, formattedTotalPrice, cartDetails } = useShoppingCart()
 
-  const cartItems = Object.keys(cartDetails).map((key) => cartDetails[key]);
+  const cartItems = Object.keys(cartDetails).map(key => cartDetails[key])
+
+  const handleCheckout = useCheckout()
 
   return (
     <Modal
@@ -28,7 +32,7 @@ export default function CartModal({ isCartModalOpen: isOpen, toggleModal }) {
             </div>
             <hr />
             {cartCount > 0 ? (
-              cartItems.map((cartItem) => (
+              cartItems.map(cartItem => (
                 <CartItem key={cartItem.id} cartItem={cartItem} />
               ))
             ) : (
@@ -38,6 +42,7 @@ export default function CartModal({ isCartModalOpen: isOpen, toggleModal }) {
             )}
             <div className="ml-auto mt-4">
               <button
+                onClick={handleCheckout}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 style={{ marginRight: 4 }}
               >
@@ -54,5 +59,5 @@ export default function CartModal({ isCartModalOpen: isOpen, toggleModal }) {
         </div>
       </div>
     </Modal>
-  );
+  )
 }

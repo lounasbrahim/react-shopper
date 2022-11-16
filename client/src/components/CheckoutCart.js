@@ -1,8 +1,13 @@
-import React from "react";
+import React from 'react'
+import useCheckout from '../utils/useCheckout'
 
 export default function CheckoutCart() {
+  const handleCheckout = useCheckout()
   return (
-    <button className="inline-flex items-center bg-green-700 border-0 py-1 px-3 focus:outline-none hover:bg-green-600 rounded text-white mt-4 md:mt-0">
+    <button
+      onClick={handleCheckout}
+      className="inline-flex items-center bg-green-700 border-0 py-1 px-3 focus:outline-none hover:bg-green-600 rounded text-white mt-4 md:mt-0"
+    >
       Go To Checkout
       <svg
         fill="none"
@@ -16,5 +21,5 @@ export default function CheckoutCart() {
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
     </button>
-  );
+  )
 }
