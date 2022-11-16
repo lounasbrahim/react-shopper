@@ -7,6 +7,7 @@ export default function useCheckout() {
   const { redirectToCheckout, cartDetails } = useShoppingCart()
 
   async function handleCheckout() {
+    console.log('checkout started')
     const session = await axios
       .post('/api/checkout-sessions', cartDetails)
       .then(res => res.data)
