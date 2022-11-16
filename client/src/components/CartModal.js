@@ -2,11 +2,14 @@
 import React from "react";
 import Modal from "react-modal";
 import { useShoppingCart } from "use-shopping-cart";
+import CartItem from "./CartItem";
 
 Modal.setAppElement("#root");
 
 export default function CartModal({ isCartModalOpen: isOpen, toggleModal }) {
-  const { cartCount, formattedTotalPrice } = useShoppingCart();
+  const { cartCount, formattedTotalPrice, cartDetails } = useShoppingCart();
+
+  const cartItems = Object.keys(cartDetails).map((key) => cartDetails[key]);
 
   return (
     <Modal
@@ -24,6 +27,15 @@ export default function CartModal({ isCartModalOpen: isOpen, toggleModal }) {
               </div>
             </div>
             <hr />
+            {cartCount > 0 ? (
+              cartItems.map((cartItem) => (
+                <CartItem key={cartItem.id} cartItem={cartItem} />
+              ))
+            ) : (
+              <div className="text-gray-500 text-sm">
+                There is no Item in your cart
+              </div>
+            )}
             <div className="ml-auto mt-4">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
