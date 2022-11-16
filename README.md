@@ -13,21 +13,27 @@ Clone the repo :
 ```
 ~ git clone https://github.com/lounasbrahim/react-shopper.git
 ```
-install Server dependencies : 
+Install Server dependencies : 
 
 ```
 ~ cd react-shopper
 ~ npm install
 ```
-install Client dependencies : 
+Install Client dependencies : 
 ```
 ~ cd client
 ~ npm install
 ```
 
+Runing the project : 
+```
+~ npm run dev
+```
+
+
 ## Troubleshooting
 
-if there is an error with nodejs, try to run the project with node version `14.15.4`
+If there is an error running the project with your version of nodejs, try to run the project with node version `14.15.4`
 by using nvm (nvm should be already installed) : 
 
 ```
