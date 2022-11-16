@@ -1,6 +1,8 @@
 import React from "react";
 import { LogoIcon } from "./Icons";
 import { Link } from "react-router-dom";
+import CartSummary from "./CartSummary";
+import CheckoutCart from "./CheckoutCart";
 
 export default function Navbar() {
   return (
@@ -16,6 +18,8 @@ export default function Navbar() {
             </span>
           </Link>
         </span>
+        <CartSummary />
+        <CheckoutCart />
       </div>
     </header>
   );

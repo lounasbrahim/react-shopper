@@ -22,8 +22,8 @@ function App() {
         currency="USD"
       >
         <BrowserRouter>
-          <Toaster position="bottom-center" />
           <Navbar />
+          <Toaster position="bottom-center" />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/result" component={Result} />
