@@ -9,7 +9,7 @@ export default function RemoveFromCart({ product }) {
     removeItem(product.sku);
     return isItemInCart(product.sku)
       ? toast.success(`${product.name} is removed from your Cart`)
-      : toast.error(`The is no ${product.name} in your Cart`);
+      : toast.error(`There is no ${product.name} in your Cart`);
   }
 
   const isItemInCart = (productSku) => {
