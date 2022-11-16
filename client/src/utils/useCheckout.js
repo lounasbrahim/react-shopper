@@ -16,7 +16,7 @@ export default function useCheckout() {
       })
 
     if (session) {
-      redirectToCheckout(session.id)
+      redirectToCheckout({ sessionId: session.id })
     }
   }
 
