@@ -1,6 +1,6 @@
 # React Shopper
 
-React / TailwindCss / Nodejs(express) / Stripe Api Shopping Cart with stripe payements
+React / TailwindCss / Nodejs (express) / Stripe Api Shopping Cart with stripe payements
 
 ## Requirements
 
