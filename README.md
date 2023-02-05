@@ -38,7 +38,7 @@ by using nvm (nvm should be already installed) :
 
 ```
 ~ nvm install 14.15.4
-~ npm use 14.15.4
+~ nvm use 14.15.4
 ```
 
 ## Screenshot 
